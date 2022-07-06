@@ -4,8 +4,8 @@ function Development() {
     return ( 
         <div>
             <Navigation />
-            <div>
-                <h1>Development Page</h1>
+            <div className="max-w-md mx-auto mt-8">
+                <h1 className="text-center">Development Page</h1>
             </div>
         </div>
      );

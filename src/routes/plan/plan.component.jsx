@@ -4,8 +4,8 @@ function Plan() {
     return ( 
         <div>
             <Navigation />
-            <div>
-                <h1>Plan Page</h1>
+            <div className="max-w-md mx-auto mt-8">
+                <h1 className="text-center">Project Plan</h1>
             </div>
         </div>
      );

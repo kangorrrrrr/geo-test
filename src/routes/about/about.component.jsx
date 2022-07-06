@@ -4,8 +4,8 @@ function About() {
     return ( 
         <div>
             <Navigation />
-            <div>
-                <h1>About Page</h1>
+            <div className="max-w-md mx-auto mt-8">
+                <h1 className="text-center">About Page</h1>
             </div>
         </div>
      );

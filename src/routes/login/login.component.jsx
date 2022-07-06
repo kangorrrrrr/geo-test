@@ -2,7 +2,7 @@ import Navigation from "../navigation/navigation.component";
 
 function Login() {
     return ( 
-        <div className="">
+        <div>
             <Navigation />
             <div className="max-w-md mx-auto mt-8">
                 <h1 className="text-xl font-bold">Login with Your Account</h1>
