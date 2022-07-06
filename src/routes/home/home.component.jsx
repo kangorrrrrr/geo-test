@@ -274,13 +274,13 @@ export default function Example() {
                 )}
               </Popover>
 
-              <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
+              <a href="/about" className="text-base font-medium text-gray-500 hover:text-gray-900">
                 About
               </a>
-              <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
+              <a href="/development" className="text-base font-medium text-gray-500 hover:text-gray-900">
                 Development
               </a>
-              <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
+              <a href="/plan" className="text-base font-medium text-gray-500 hover:text-gray-900">
                 Project Plan
               </a>
             </Popover.Group>
