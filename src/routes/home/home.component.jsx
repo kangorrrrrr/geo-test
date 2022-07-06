@@ -16,6 +16,9 @@
 */
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
+import '../../assets/locator.svg'
+import '../../assets/map.png'
+
 import {
   AnnotationIcon,
   ChatAlt2Icon,
@@ -197,20 +200,15 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Example() {
+export default function Home() {
   return (
     <div className="bg-white">
       <header>
         <Popover className="relative bg-white">
           <div className="flex items-center justify-between px-4 py-6 mx-auto max-w-7xl sm:px-6 md:justify-start md:space-x-10 lg:px-8">
             <div className="flex justify-start lg:w-0 lg:flex-1">
-              <a href="#">
-                <span className="sr-only">Workflow</span>
-                <img
-                  className="w-auto h-8 sm:h-10"
-                  src="https://tailwindui.com/img/logos/workflow-mark-purple-600-to-indigo-600.svg"
-                  alt=""
-                />
+              <a href="/">
+              <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Compass</title><path d="M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192 192-86 192-192z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path d="M350.67 150.93l-117.2 46.88a64 64 0 00-35.66 35.66l-46.88 117.2a8 8 0 0010.4 10.4l117.2-46.88a64 64 0 0035.66-35.66l46.88-117.2a8 8 0 00-10.4-10.4zM256 280a24 24 0 1124-24 24 24 0 01-24 24z"/></svg>
               </a>
             </div>
             <div className="-my-2 -mr-2 md:hidden">
@@ -290,7 +288,7 @@ export default function Example() {
               </a>
               <a
                 href="/sign-up"
-                className="inline-flex items-center justify-center px-4 py-2 ml-8 text-base font-medium text-white border border-transparent rounded-md shadow-sm whitespace-nowrap bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border hover:from-purple-700 hover:to-indigo-700"
+                className="inline-flex items-center justify-center px-4 py-2 ml-8 text-base font-medium text-white border border-transparent rounded-md shadow-sm whitespace-nowrap bg-gradient-to-r from-cyan-600 to-cyan-600 bg-origin-border hover:from-cyan-500 hover:to-cyan-700"
               >
                 Sign up
               </a>
@@ -386,33 +384,32 @@ export default function Example() {
               <div className="absolute inset-0">
                 <img
                   className="object-cover w-full h-full"
-                  src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2830&q=80&sat=-100"
-                  alt="People working on laptops"
+                  src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/crews-feature-intro-bg-1521130330.jpg?crop=1.00xw:0.848xh;0,0&resize=1600:*"
+                  alt=""
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-800 to-indigo-700 mix-blend-multiply" />
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-cyan-300 mix-blend-multiply" />
               </div>
               <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
                 <h1 className="text-4xl font-extrabold tracking-tight text-center sm:text-5xl lg:text-6xl">
-                  <span className="block text-white">Take control of your</span>
-                  <span className="block text-indigo-200">customer support</span>
+                  <span className="block text-white">Be a part of</span>
+                  <span className="block text-slate-200">STREET RUN</span>
                 </h1>
-                <p className="max-w-lg mx-auto mt-6 text-xl text-center text-indigo-200 sm:max-w-3xl">
-                  Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt
-                  amet fugiat veniam occaecat fugiat aliqua.
+                <p className="max-w-lg mx-auto mt-6 text-xl text-center text-white sm:max-w-3xl">
+                  Start jogging on the street. Plan the most amazing and excellent running route with the best-ever street running apps.
                 </p>
                 <div className="max-w-sm mx-auto mt-10 sm:max-w-none sm:flex sm:justify-center">
                   <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
                     <a
-                      href="#"
+                      href="/development"
                       className="flex items-center justify-center px-4 py-3 text-base font-medium text-indigo-700 bg-white border border-transparent rounded-md shadow-sm hover:bg-indigo-50 sm:px-8"
                     >
                       Get started
                     </a>
                     <a
-                      href="#"
+                      href="https://education.nationalgeographic.org/resource/geographic-information-system-gis"
                       className="flex items-center justify-center px-4 py-3 text-base font-medium text-white bg-indigo-500 border border-transparent rounded-md shadow-sm bg-opacity-60 hover:bg-opacity-70 sm:px-8"
                     >
-                      Live demo
+                      Learn More about GIS
                     </a>
                   </div>
                 </div>
@@ -421,7 +418,7 @@ export default function Example() {
           </div>
         </div>
 
-        {/* Logo Cloud */}
+        {/* Logo Cloud
         <div className="bg-gray-100">
           <div className="px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <p className="text-sm font-semibold tracking-wide text-center text-gray-500 uppercase">
@@ -457,7 +454,7 @@ export default function Example() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Alternating Feature Sections */}
         <div className="relative pt-16 pb-32 overflow-hidden">
@@ -519,7 +516,7 @@ export default function Example() {
                 <div className="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
                   <img
                     className="w-full shadow-xl rounded-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                    src="https://tailwindui.com/img/component-images/inbox-app-screenshot-1.jpg"
+                    src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/walk-to-run-program-1616070573.jpg"
                     alt="Inbox user interface"
                   />
                 </div>
@@ -559,7 +556,7 @@ export default function Example() {
                 <div className="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
                   <img
                     className="w-full shadow-xl rounded-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
-                    src="https://tailwindui.com/img/component-images/inbox-app-screenshot-2.jpg"
+                    src="https://geodata.gov.hk/gs/resources/hkgeohub/landing_page/DOP_basemap_3000x1982.jpg"
                     alt="Customer profile user interface"
                   />
                 </div>
@@ -594,7 +591,7 @@ export default function Example() {
           </div>
         </div>
 
-        {/* Stats section */}
+        {/* Stats section
         <div className="relative bg-gray-900">
           <div className="absolute inset-x-0 bottom-0 h-80 xl:top-0 xl:h-full">
             <div className="w-full h-full xl:grid xl:grid-cols-2">
@@ -638,7 +635,7 @@ export default function Example() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* CTA Section */}
         <div className="bg-white">
@@ -759,16 +756,16 @@ export default function Example() {
             </div>
           </div>
           <div className="pt-8 mt-12 border-t border-gray-200 md:flex md:items-center md:justify-between lg:mt-16">
-            <div className="flex space-x-6 md:order-2">
+            {/* <div className="flex space-x-6 md:order-2">
               {footerNavigation.social.map((item) => (
                 <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">
                   <span className="sr-only">{item.name}</span>
                   <item.icon className="w-6 h-6" aria-hidden="true" />
                 </a>
               ))}
-            </div>
+            </div> */}
             <p className="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
-              &copy; 2020 Workflow, Inc. All rights reserved.
+              &copy; 2022 Geospatial Lab Hackathon. All rights reserved.
             </p>
           </div>
         </div>
