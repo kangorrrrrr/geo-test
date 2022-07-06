@@ -10,7 +10,7 @@ const navigation = [
   { name: 'Company', href: '#' },
 ]
 
-export default function Example() {
+export default function Home() {
   return (
     <div className="relative overflow-hidden bg-gray-50">
       <div className="hidden sm:block sm:absolute sm:inset-y-0 sm:h-full sm:w-full" aria-hidden="true">
