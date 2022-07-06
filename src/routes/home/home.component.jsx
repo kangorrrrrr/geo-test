@@ -16,8 +16,7 @@
 */
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
-import '../../assets/locator.svg'
-import '../../assets/map.png'
+import { ReactComponent as Logo } from '../../assets/locator.svg'
 
 import {
   AnnotationIcon,
@@ -205,11 +204,22 @@ export default function Home() {
     <div className="bg-white">
       <header>
         <Popover className="relative bg-white">
-          <div className="flex items-center justify-between px-4 py-6 mx-auto max-w-7xl sm:px-6 md:justify-start md:space-x-10 lg:px-8">
+        <div className="flex items-center justify-between px-4 py-6 mx-auto max-w-7xl sm:px-6 md:justify-start md:space-x-10 lg:px-8">
             <div className="flex justify-start lg:w-0 lg:flex-1">
               <a href="/">
-              <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Compass</title><path d="M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192 192-86 192-192z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path d="M350.67 150.93l-117.2 46.88a64 64 0 00-35.66 35.66l-46.88 117.2a8 8 0 0010.4 10.4l117.2-46.88a64 64 0 0035.66-35.66l46.88-117.2a8 8 0 00-10.4-10.4zM256 280a24 24 0 1124-24 24 24 0 01-24 24z"/></svg>
+                <Logo strokeWidth="1rem"/>
               </a>
+              {/* <p>test</p> */}
+              <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+	 width="25px" height="25px" viewBox="0 0 25 25" >
+<g>
+	<path d="M197.849,0C122.131,0,60.531,61.609,60.531,137.329c0,72.887,124.591,243.177,129.896,250.388l4.951,6.738
+		c0.579,0.792,1.501,1.255,2.471,1.255c0.985,0,1.901-0.463,2.486-1.255l4.948-6.738c5.308-7.211,129.896-177.501,129.896-250.388
+		C335.179,61.609,273.569,0,197.849,0z M197.849,88.138c27.13,0,49.191,22.062,49.191,49.191c0,27.115-22.062,49.191-49.191,49.191
+		c-27.114,0-49.191-22.076-49.191-49.191C148.658,110.2,170.734,88.138,197.849,88.138z"/>
+</g>
+
+</svg>
             </div>
             <div className="-my-2 -mr-2 md:hidden">
               <Popover.Button className="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -497,16 +507,16 @@ export default function Home() {
                     </div>
                     <footer className="mt-3">
                       <div className="flex items-center space-x-3">
-                        <div className="flex-shrink-0">
+                        {/* <div className="flex-shrink-0">
                           <img
                             className="w-6 h-6 rounded-full"
                             src="https://images.unsplash.com/photo-1509783236416-c9ad59bae472?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
                             alt=""
                           />
-                        </div>
-                        <div className="text-base font-medium text-gray-700">
+                        </div> */}
+                        {/* <div className="text-base font-medium text-gray-700">
                           Marcia Hill, Digital Marketing Manager
-                        </div>
+                        </div> */}
                       </div>
                     </footer>
                   </blockquote>
@@ -534,12 +544,13 @@ export default function Home() {
                   </div>
                   <div className="mt-6">
                     <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
-                      Better understand your customers
+                        What is Geolocation?
                     </h2>
                     <p className="mt-4 text-lg text-gray-500">
-                      Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia
-                      porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at.
-                      Lectus viverra dui tellus ornare pharetra.
+                    Geolocation refers to the identification of the geographic location of a user or computing device 
+                    via a variety of data collection mechanisms. Typically, most geolocation services use network routing 
+                    addresses or internal GPS devices to determine this location. Geolocation is a device-specific API. 
+                    This means that browsers or devices must support geolocation in order to use it through web applications.
                     </p>
                     <div className="mt-6">
                       <a

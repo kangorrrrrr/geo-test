@@ -17,6 +17,7 @@ import {
   XIcon,
 } from '@heroicons/react/outline'
 import { ChevronDownIcon } from '@heroicons/react/solid'
+import { ReactComponent as Logo } from '../../assets/locator.svg'
 
 const solutions = [
   {
@@ -191,13 +192,8 @@ function Navigation() {
         <Popover className="relative bg-white">
           <div className="flex items-center justify-between px-4 py-6 mx-auto max-w-7xl sm:px-6 md:justify-start md:space-x-10 lg:px-8">
             <div className="flex justify-start lg:w-0 lg:flex-1">
-              <a href="#">
-                <span className="sr-only">Workflow</span>
-                <img
-                  className="w-auto h-8 sm:h-10"
-                  src="https://tailwindui.com/img/logos/workflow-mark-purple-600-to-indigo-600.svg"
-                  alt=""
-                />
+            <a href="/">
+                <Logo strokeWidth="1rem"/>
               </a>
             </div>
             <div className="-my-2 -mr-2 md:hidden">
