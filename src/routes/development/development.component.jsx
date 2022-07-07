@@ -1,15 +1,16 @@
 import Navigation from "../navigation/navigation.component";
 import { GoogleMap, useJsApiLoader, Marker, useLoadScript } from '@react-google-maps/api';
+import { Wrapper, Status } from "@googlemaps/react-wrapper";
 import { Fragment } from 'react'
 import { Menu, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/solid'
+import { useState } from "react";
 
 function Development() {
-    const { isLoaded } = useLoadScript({
+
+  const { isLoaded } = useLoadScript({
         googleMapsApiKey: "AIzaSyC8BcAMJGUKK6F4Y-fIWq6XCHZ8hDxBIhE",
     })
-
-    const center = { lat: 22.305807393427344, lng: 114.253535827995}
 
     if (!isLoaded) {
         return <div>Loading...</div>
@@ -22,11 +23,11 @@ function Development() {
             <Navigation />
             <div className="max-w-md mx-auto mt-8">
                 <h1 className="text-xl font-bold text-center">Choose Your Personal Route</h1>
+                <h1 className="text-xl font-bold text-center">選擇您的街跑路線</h1>
             </div>
             <div className="">
                 <div className="flex mx-auto mt-10 max-w-7xl">
                     <Map />
-
 
                     <Dropdown className="pl-10"/>
                 </div>
@@ -42,95 +43,53 @@ function classNames(...classes) {
   }
 
 function Dropdown() {
-    return (
-      <Menu as="div" className="relative inline-block text-left">
-        <div>
-          <Menu.Button className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500">
-            Choose District
-            <ChevronDownIcon className="w-5 h-5 ml-2 -mr-1" aria-hidden="true" />
-          </Menu.Button>
-        </div>
-  
-        <Transition
-          as={Fragment}
-          enter="transition ease-out duration-100"
-          enterFrom="transform opacity-0 scale-95"
-          enterTo="transform opacity-100 scale-100"
-          leave="transition ease-in duration-75"
-          leaveFrom="transform opacity-100 scale-100"
-          leaveTo="transform opacity-0 scale-95"
+
+    const [coordinates, setCoordinates] = useState({ lat: 22.305807393427344, lng: 114.253535827995})
+
+    return ( 
+      <div>
+        <label htmlFor="location" className="block text-sm font-medium text-gray-700">
+          Location
+        </label>
+        <select
+          id="location"
+          name="location"
+          className="block w-full py-2 pl-3 pr-10 mt-1 text-base border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          defaultValue="Choose District"
         >
-          <Menu.Items className="absolute right-0 w-56 mt-2 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-            <div className="py-1">
-              <Menu.Item>
-                {({ active }) => (
-                  <a
-                    href="#"
-                    className={classNames(
-                      active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                      'block px-4 py-2 text-sm'
-                    )}
-                  >
-                    Hong Kong Island
-                  </a>
-                )}
-              </Menu.Item>
-              <Menu.Item>
-                {({ active }) => (
-                  <a
-                    href="#"
-                    className={classNames(
-                      active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                      'block px-4 py-2 text-sm'
-                    )}
-                  >
-                    Kowloon
-                  </a>
-                )}
-              </Menu.Item>
-              <Menu.Item>
-                {({ active }) => (
-                  <a
-                    href="#"
-                    className={classNames(
-                      active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                      'block px-4 py-2 text-sm'
-                    )}
-                  >
-                    New Territories
-                  </a>
-                )}
-              </Menu.Item>
-              <form method="POST" action="#">
-                <Menu.Item>
-                  {({ active }) => (
-                    <button
-                      type="submit"
-                      className={classNames(
-                        active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                        'block w-full text-left px-4 py-2 text-sm'
-                      )}
-                    >
-                      Cheung Chau / Islands District
-                    </button>
-                  )}
-                </Menu.Item>
-              </form>
-            </div>
-          </Menu.Items>
-        </Transition>
-      </Menu>
+          <option value="">Choose District</option>
+          <option value="HK Island" onClick={() => setCoordinates({ lat: 22.265288304629017, lng: 114.19334336847231 })}>Hong Kong Island</option>
+          <option value="KL" onClick={() => setCoordinates({ lat: 22.313053944397023, lng: 114.17316071220313 })}>Kowloon</option>
+          <option value="NT" onClick={() => setCoordinates({ lat: 22.371501631547694, lng: 114.17872248615326 })}>New Territories</option>
+          <option value="CC" onClick={() => setCoordinates({ lat: 22.208881551019363, lng: 114.02968140494471 })}>Cheung Chau / Islands District</option>
+        </select>
+
+        <label htmlFor="start" className="block text-sm font-medium text-gray-700">
+          Choose a starting point
+        </label>
+        <select
+          id="start"
+          name="start"
+          className="block w-full py-2 pl-3 pr-10 mt-1 text-base border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          defaultValue="Choose a starting point"
+        >
+          <option value="">Choose a starting point</option>
+          <option value="HK Island" onClick={() => setCoordinates({ lat: 22.265288304629017, lng: 114.19334336847231 })}>Hong Kong Island</option>
+          <option value="KL" onClick={() => setCoordinates({ lat: 22.313053944397023, lng: 114.17316071220313 })}>Kowloon</option>
+          <option value="NT" onClick={() => setCoordinates({ lat: 22.371501631547694, lng: 114.17872248615326 })}>New Territories</option>
+          <option value="CC" onClick={() => setCoordinates({ lat: 22.208881551019363, lng: 114.02968140494471 })}>Cheung Chau / Islands District</option>
+        </select>
+      </div>
     )
   }
 
 function Map() {
-    const center = { lat: 22.305807393427344, lng: 114.253535827995}
+    let center = { lat: 22.305807393427344, lng: 114.253535827995}
     const containerStyle = {width: '1080px', height: '960px'}
     const zoom = 18
-    const maptype = 'satellite'
+    const maptype = 'hybrid'
 
     let map = <GoogleMap center={center} zoom={zoom} mapContainerStyle={containerStyle} mapTypeId={maptype}></GoogleMap>
-
 
     return map
 }

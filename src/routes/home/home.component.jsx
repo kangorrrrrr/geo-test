@@ -402,7 +402,7 @@ export default function Home() {
               <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
                 <h1 className="text-4xl font-extrabold tracking-tight text-center sm:text-5xl lg:text-6xl">
                   <span className="block text-white">Be a part of</span>
-                  <span className="block text-slate-200">STREET RUN</span>
+                  <span className="block text-slate-200">STREET RUNNER</span>
                 </h1>
                 <p className="max-w-lg mx-auto mt-6 text-xl text-center text-white sm:max-w-3xl">
                   Start jogging on the street. Plan the most amazing and excellent running route with the best-ever street running apps.
